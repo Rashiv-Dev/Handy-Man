@@ -99,3 +99,16 @@ app
       });
     })
   );
+
+// GET route for user's dashboard
+app.get("dashboard", (req, res) => {
+  if (req.session.user && req.cookies.user_sid) {
+    hbsContent.loggedin = true;
+    hbsContent.userName = req.session.user.username;
+    hbsContent.title = " You are logged in ";
+    //res.sendFile(_dirname + '/public/dashboard(.html');
+    res.render("index", hbsContent);
+  } else {
+    res.redirect("login");
+  }
+});
