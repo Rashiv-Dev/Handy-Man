@@ -38,3 +38,12 @@ var hbsContent = {
   title: "You are not logged-in users",
   body: "Welcome",
 };
+
+// Middleware function to check for logged in users
+var sessionChecker = (req, res, next) => {
+  if (req.session.user && req.cookies.user_sid) {
+    res.redirect("/dashboard");
+  } else {
+    next();
+  }
+};
