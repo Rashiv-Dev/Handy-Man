@@ -1,5 +1,4 @@
 /* npm package to add star rating */
-
 import StarsRating from 'stars-rating'
 import React from 'react'
 import { render } from 'react-dom'
