@@ -127,3 +127,7 @@ app.get("logout", (req, res) => {
 app.use(function (req, res, next) {
   res.status(404).send("Not Found");
 });
+
+app.listen(app.get("port"), () =>
+  console.log(`App started on port ${app.get("port")}`)
+);
