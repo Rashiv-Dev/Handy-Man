@@ -53,7 +53,7 @@ app.get("/", sessionChecker, (req, res) => {
   res.redirect("/login");
 });
 
-// GET request route for signup page
+// GET & POST routes for signup page
 app
   .route("/signup")
   .get((req, res) => {
@@ -74,3 +74,28 @@ app
         res.redirect("/signup");
       });
   });
+
+// GET & POST routes for user login
+app
+  .route("/login")
+  .get((req, res) => {
+    //res.sendFile(_dirname + '/public/login.html');
+    res.render("login", hbsContent);
+  })
+  .post(
+    (req,
+    (res) => {
+      var username = req.body.username;
+      var password = req.body.password;
+
+      User.findOne({ where: { username: username } }).then(function (user) {
+        if (!user) {
+        } else if (!user.validPassword(password)) {
+          res.redirect("login");
+        } else {
+          req.session.user = user.dataValues;
+          res.redirect("/dashboard");
+        }
+      });
+    })
+  );
