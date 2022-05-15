@@ -52,3 +52,9 @@ var sessionChecker = (req, res, next) => {
 app.get("/", sessionChecker, (req, res) => {
   res.redirect("/login");
 });
+
+// GET request route for signup page
+app.route("/signup").get((req, res) => {
+  //res.sendFile (_dirname + '/public/signup.html');
+  res.render("signup", hbsContent);
+});
