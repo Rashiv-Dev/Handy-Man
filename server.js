@@ -47,3 +47,8 @@ var sessionChecker = (req, res, next) => {
     next();
   }
 };
+
+// GET Request route for Home-Page
+app.get("/", sessionChecker, (req, res) => {
+  res.redirect("/login");
+});
