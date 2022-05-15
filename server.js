@@ -112,3 +112,13 @@ app.get("dashboard", (req, res) => {
     res.redirect("login");
   }
 });
+
+// GET route for user logout
+app.get("logout", (req, res) => {
+  if (req.session.user && req.cookies.user_sid) {
+    hbsContent.loggedin = false;
+    hbsContent.title = " You are logged out!";
+    res.clearCookies("user_sid");
+    res.redirect("/");
+  }
+});
