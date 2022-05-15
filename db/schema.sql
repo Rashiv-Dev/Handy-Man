@@ -4,9 +4,9 @@ CREATE DATABASE skillbuild_db;
 USE skillbuild_db;
 
 CREATE TABLE user (
-    id INT AUTO_INCREMENT NOT NULL ,
+   id INT AUTO_INCREMENT NOT NULL ,
   first_name VARCHAR(50) NOT NULL,
-   last_name VARCHAR(50) NOT NULL,
+  last_name VARCHAR(50) NOT NULL,
   user_password VARCHAR(150) NOT NULL,
   PRIMARY KEY (id)
 );
