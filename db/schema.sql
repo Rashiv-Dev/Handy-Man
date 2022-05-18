@@ -14,7 +14,7 @@ CREATE TABLE user (
 CREATE TABLE company (
    id INT NOT NULL AUTO_INCREMENT,
   company_name VARCHAR(45) NOT NULL,
-  service_offered VARCHAR(45) NOT NULL,
+  service_description VARCHAR(100) NOT NULL,
   email VARCHAR(45) NOT NULL,
   department_id VARCHAR(45) NOT NULL,
   PRIMARY KEY (id)
