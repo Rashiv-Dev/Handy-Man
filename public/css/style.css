@@ -68,7 +68,7 @@ nav a:hover {
 
 .gallery {
   flex: 4;
-  background-color: #fff;
+  background-color: rgb(236, 226, 226);
   padding: 50px;
   display: flex;
   flex-flow: row wrap;
@@ -92,14 +92,14 @@ img {
   height: auto;
 }
 
-.painting {
+.handyman {
   width: 50%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
 }
 
-.painting-details {
+.handyman-details {
   text-align: center;
   padding: 10px 20px;
   font-weight: bold;
