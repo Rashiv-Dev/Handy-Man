@@ -11,7 +11,12 @@
     <header>
         <h1>Handy Man</h1>
         <nav>
-            <a href="/login">login</a>
+    
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
         </nav>
     </header>
 <main>
