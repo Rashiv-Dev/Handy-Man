@@ -19,7 +19,7 @@ ads.init(
             type: DataTypes.STRING,
             allowNull: false,   
         },
-        ad: {
+        adText: {
             type: DataTypes.TEXT,
             allowNull: false
         },
