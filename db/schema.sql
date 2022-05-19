@@ -1,5 +1,6 @@
 DROP DATABASE IF EXISTS skillbuild_db;
 <<<<<<< HEAD
+<<<<<<< HEAD
 CREATE DATABASE skillbuild_db;
 =======
 CREATE DATABASE skillbuild_db;
@@ -23,3 +24,6 @@ CREATE TABLE company (
   PRIMARY KEY (id)
 );
 >>>>>>> AishaK
+=======
+CREATE DATABASE skillbuild_db;
+>>>>>>> 39aab6f8d3630f0a638e5fcdeaba139801bfc679
