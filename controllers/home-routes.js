@@ -1,12 +1,12 @@
 const router =require('express').Router()
 router.get('/', (req, res) => {
-    res.send('login');
+    res.render('login');
 });
 router.get('/dashboard', (req, res)=>{
-    res.send('dashboard')
+    res.render('dashboard')
 });
 router.get('/ads', (req, res) => {
-    res.send('ads');
+    res.render('ads');
 });
 
 module.exports = router;

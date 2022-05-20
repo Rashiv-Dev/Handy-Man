@@ -29,8 +29,8 @@ ads.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'company'
+        modelName: 'ad'
     }
 )
 
-module.exports = company;
+module.exports = ads;

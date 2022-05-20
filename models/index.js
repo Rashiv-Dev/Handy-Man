@@ -1,4 +1,4 @@
-const company = require('./company');
+const ads = require('./ads');
 const user = require('./user')
 
 
@@ -7,4 +7,4 @@ const user = require('./user')
 
 
 
-module.exports = {company,user};
+module.exports = {ads,user};
