@@ -37,6 +37,7 @@ footer{
     justify-content: center;
     flex-wrap: wrap;
     height: 800px;
+    background-color: rgb(241, 241, 228);
     background-image: url('../images/blueCollar.jpg');
     background-position: left;
     background-attachment: scroll;
@@ -111,6 +112,9 @@ footer{
     font-size: medium;
     width: 35%;
     color: rgb(236, 238, 245);
+    border-radius: 5px;
+    border-color: rgba(240, 248, 255, 0.703);
+    border-width: 10px;
 }
 
 .ads{
@@ -118,17 +122,22 @@ footer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: rgba(10, 99, 187, 0.572);
     font-size: medium;
     width: 35%;
     height: 400px;
     color: rgb(236, 238, 245);
+    border-radius: 5px;
+    border-color: rgba(240, 248, 255, 0.626);
+    border-width: 10px ;
 }
+
 .ads button{
     justify-content: start;
     border-radius: 5px;
     background-color: rgb(236, 238, 245);
     font-size: medium;
     width: 30%;
+    
 }
