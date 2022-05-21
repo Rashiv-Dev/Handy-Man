@@ -1,31 +1,29 @@
-<section>
-  <h2>Create New Post</h2>
+<section class="user">
+  <div>
+  <h2>Username:</h2>
+  <h2>Email:</h2>
+  </div>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
 </section>
 
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
 
-<script src="/javascript/add-post.js"></script>
+<section class="ads">
+  <div>
+  <button type="button">New Ad</button>
+  </div>
+<div class="currentAds">
+<h2>ads:</h2>
+</div>
+
+<div class="comments">
+  <div>
+    <h3>Star Rating :</h3>
+  </div>
+  <div>
+    <h3>Customer FeedBack:</h3>
+  </div>
+
+</div>
+</section>
+
+<script src="/js/"></script>

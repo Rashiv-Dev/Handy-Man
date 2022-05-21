@@ -97,3 +97,38 @@ footer{
     font-size: medium;
     background-color: rgb(236, 238, 245);
 }
+
+.user{
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(10, 99, 187, 0.572);
+    border-color: rgb(236, 238, 245);
+    border-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: medium;
+    width: 35%;
+    color: rgb(236, 238, 245);
+}
+
+.ads{
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(10, 99, 187, 0.572);
+    font-size: medium;
+    width: 35%;
+    height: 400px;
+    color: rgb(236, 238, 245);
+}
+.ads button{
+    justify-content: start;
+    border-radius: 5px;
+    background-color: rgb(236, 238, 245);
+    font-size: medium;
+    width: 30%;
+}
