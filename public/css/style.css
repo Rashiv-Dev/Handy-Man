@@ -3,20 +3,66 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+header {
+    background-color: rgba(10, 99, 187, 0.572);
+    color: rgb(236, 238, 245);
+    border-bottom: 20px;
+    border-color: rgb(236, 238, 245);
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    font-size: xx-large;
+    
+}
+header a {
+    text-decoration: none;
+    color: rgb(236, 238, 245)
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: end;
+    background-color: rgba(10, 99, 187, 0.572);
+    color: rgb(236, 238, 245);
+    height: 50px;
+    font-size: larger;
+}
 .flex-container{
     display: flex;
     flex-direction: column; 
     justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
+    height: 800px;
+    background-image: url('../images/blueCollar.jpg');
+    background-position: left;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: auto;
+
 }
 .login-form {
-        background-color: rgb(188, 197, 123);
+        background-color: rgba(10, 99, 187, 0.572);
         border-style: outset; 
-        color: rgb(46, 46, 42);
+        color: rgb(236, 238, 245);
+        align-self: center;
+        width: 30%;
+        line-height: 1.5;
+}
+.login-form div {
+    padding: 10px;
 }
 .signup-form{
-    background-color: rgb(188, 197, 123);
-    border-style: outset; 
-    color: rgb(46, 46, 42);
+    background-color: rgba(10, 99, 187, 0.572);
+        border-style: outset; 
+        color: rgb(236, 238, 245);
+        align-self: center;
+        width: 30%;
+        line-height: 1.5;
+}
+.signup-form div {
+    padding: 10px;
 }
