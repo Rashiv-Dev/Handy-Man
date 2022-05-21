@@ -1,31 +1,41 @@
-<section>
-  <h2>Create New Add</h2>
+ <main class="flex-container">
+      <section class="user">
+        <div>
+          <h2>Create New Ad Here</h2>
+        </div>
+      </section>
 
-  <form class="new-post-form">
-    <div>
-      <label for="add-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="add-url">Link</label>
-      <input id="add-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+      <section class="ads">
+        <form id="renderAdForm">
+          <div id="renderAdDiv">
+            <h2>Tell us about your company.</h2>
+            <label for="companyName">Company Name:</label><br />
+            <input type="text" id="CompanyName" name="CompanyName" /><br />
+            <label for="specialty">What is your specialty?</label><br />
+            <input type="text" id="specialty" name="specialty" /><br />
 
-{{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
+            <h2>What type of service do you provide?</h2>
+            <input
+              type="radio"
+              id="remodelingNewConstruction"
+              value="Remodeling/New Construction"
+            />
+            <label>Remodeling/New Construction</label><br />
+            <input
+              type="radio"
+              id="electricianServices"
+              value="Electrician Services"
+            />
+            <label>Electrician Services</label><br />
+            <input type="radio" id="plumbing" value="Plumbing" />
+            <label>Plumbing</label><br />
+            <input type="radio" id="hvac" value="HVAC" />
+            <label>HVAC</label><br />
 
-<script src="/javascript/add-post.js"></script>
+            <button type="button" id="renderAdButton">Render Ad</button>
+          </div>
+        </form>
+      </section>
+
+      <script src="/js/"></script>
+    </main>
