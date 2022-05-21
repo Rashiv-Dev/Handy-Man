@@ -51,9 +51,25 @@ footer{
         align-self: center;
         width: 30%;
         line-height: 1.5;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
 }
 .login-form div {
     padding: 10px;
+}
+
+.login-form input {
+    border-radius: 5px;
+    width: auto;
+}
+.login-form button{
+    border-radius: 5px;
+    width: 30%;
+    font-size: medium;
+    background-color: rgb(236, 238, 245);
 }
 .signup-form{
     background-color: rgba(10, 99, 187, 0.572);
@@ -62,7 +78,22 @@ footer{
         align-self: center;
         width: 30%;
         line-height: 1.5;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-direction: column;
 }
 .signup-form div {
     padding: 10px;
+}
+.signup-form input {
+    border-radius: 5px;
+    width: auto;
+}
+.signup-form button {
+    border-radius: 5px;
+    width: auto;
+    width: 30%;
+    font-size: medium;
+    background-color: rgb(236, 238, 245);
 }
