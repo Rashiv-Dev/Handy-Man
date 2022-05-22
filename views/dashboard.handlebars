@@ -1,7 +1,6 @@
 <section class="user">
   <div>
-  <h2>Username:</h2>
-  <h2>Email:</h2>
+  <h2>Username:{{User.username}}</h2>
   </div>
 
 </section>
@@ -9,18 +8,25 @@
 
 <section class="ads">
   <div>
-  <button type="button">New Ad</button>
+  <a href= '/ads'><button type="button">New Ad</button></a>
   </div>
 <div class="currentAds">
 <h2>ads:</h2>
+{{#each ad as |ads|}}
+{{>ads-details}}
+{{/each}}
 </div>
 
 <div class="comments">
   <div>
-    <h3>Star Rating :</h3>
-  </div>
-  <div>
     <h3>Customer FeedBack:</h3>
+    {{#each comment.rating as |rating|}}
+    {{>rating-details}}
+    {{/each}}
+    
+    {{#each comment.text as |comments|}}
+    {{>comments-details}}
+    {{/each}}
   </div>
 
 </div>
