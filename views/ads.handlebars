@@ -1,4 +1,24 @@
- <main class="flex-container">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Handy Man</title>
+  </head>
+  <body>
+    <header>
+      <h1>Handy Man</h1>
+      <nav>
+        {{#if loggedIn}}
+        <button id="logout" class="btn-no-style">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="flex-container">
       <section class="user">
         <div>
           <h2>Create New Ad Here</h2>
@@ -9,11 +29,8 @@
         <form id="renderAdForm">
           <div id="renderAdDiv">
             <h2>Tell us about your company.</h2>
-            <label for="companyName">Company Name:</label><br />
+            <label for="companyName">Company Name:</label><br/>
             <input type="text" id="CompanyName" name="CompanyName" /><br />
-            <label for="specialty">What is your specialty?</label><br />
-            <input type="text" id="specialty" name="specialty" /><br />
-
             <h2>What type of service do you provide?</h2>
             <input
               type="radio"
@@ -31,7 +48,8 @@
             <label>Plumbing</label><br />
             <input type="radio" id="hvac" value="HVAC" />
             <label>HVAC</label><br />
-
+            <label for="specialty">What is your specialty?</label><br />
+            <input type="text" id="specialty" name="specialty" /><br />
             <button type="button" id="renderAdButton">Render Ad</button>
           </div>
         </form>
@@ -39,3 +57,7 @@
 
       <script src="/js/"></script>
     </main>
+
+    <footer>Hope you found the right handy man for the job!</footer>
+  </body>
+</html>
