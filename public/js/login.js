@@ -1,3 +1,5 @@
+const signupButtonEl = document.querySelector('signup-button');
+
 const loginFormHandler = async (event) => {
     event.preventDefault();
 
@@ -12,7 +14,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/dashboard');
     } else {
         alert('Failed to log in.');
     }
@@ -49,3 +51,4 @@ document
 document
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);
+

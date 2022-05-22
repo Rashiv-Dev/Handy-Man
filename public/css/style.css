@@ -72,6 +72,7 @@ footer{
     font-size: medium;
     background-color: rgb(236, 238, 245);
 }
+
 .signup-form{
     background-color: rgba(10, 99, 187, 0.572);
         border-style: outset; 
@@ -93,7 +94,6 @@ footer{
 }
 .signup-form button {
     border-radius: 5px;
-    width: auto;
     width: 30%;
     font-size: medium;
     background-color: rgb(236, 238, 245);
