@@ -65,7 +65,7 @@ const commentdata = [
   },
   {
     comment_text: 'Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
-    customeremail: ''
+    customeremail: 'smakcski78@gmail.com'
   },
   {
     comment_text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.',
