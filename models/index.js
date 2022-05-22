@@ -1,14 +1,14 @@
-const ads = require('./ads');
-const user = require('./user')
+const Ads = require('./Ads');
+const User = require('./User')
 
-user.hasMany( ads, {
-    foreignKey:'user_id'
+User.hasMany( Ads, {
+    foreignKey:'User_id'
 })
-ads.belongsTo(user,{
-    foreignKey: 'user_id'
+Ads.belongsTo(User,{
+    foreignKey: 'User_id'
 })
 
 
 
 
-module.exports = {ads,user};
+module.exports = {Ads,User};

@@ -1,9 +1,10 @@
 const { Model,DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const User = require('./User');
 
-class Ads extends Model {}
+class Comments extends Model{}
 
-Ads.init(
+Comments.init(
     {
         id:{
             type: DataTypes.INTEGER,
@@ -11,17 +12,20 @@ Ads.init(
             primaryKey: true,
             autoIncrement : true,
         },
-        company_name: {
-            type: DataTypes.STRING,
-            allowNull: false
+        rating:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
         },
-        service: {
-            type: DataTypes.STRING,
-            allowNull: false,   
-        },
-        adText: {
+        text:{
             type: DataTypes.TEXT,
-            allowNull: false
+            allowNull: false,
+        },
+        email:{
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isemail: true,
+            },
         },
         user_id:{
             type: DataTypes.INTEGER,
@@ -29,6 +33,7 @@ Ads.init(
                 model: 'User',
                 key: 'id',
             },
+        },
     },
     {
         sequelize,
@@ -37,6 +42,5 @@ Ads.init(
         underscored: true,
         modelName: 'ad'
     }
+    
 )
-
-module.exports = Ads;

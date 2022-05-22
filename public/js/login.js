@@ -1,5 +1,5 @@
-const loginFormEl = document.querySelector('.login-form');
-const signupFormEl = document.querySelector('.signup-form');
+var loginFormEl = document.querySelector('.login-form');
+var signupFormEl = document.querySelector('.signup-form');
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
