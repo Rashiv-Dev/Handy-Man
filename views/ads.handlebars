@@ -9,27 +9,44 @@
         <form id="renderAdForm">
           <div id="renderAdDiv">
             <h2>Tell us about your company.</h2>
-            <label for="companyName">Company Name:</label><br/>
-            <input type="text" id="CompanyName" name="CompanyName" /><br />
+            <label for="company_name">Company Name:</label><br/>
+            <input type="text" id="company_name" name="company_name" /><br />
+            
             <h2>What type of service do you provide?</h2>
+
             <input
               type="radio"
+              for="service"
               id="remodelingNewConstruction"
               value="Remodeling/New Construction"
             />
             <label>Remodeling/New Construction</label><br />
+            
             <input
               type="radio"
+              for="service"
               id="electricianServices"
               value="Electrician Services"
             />
             <label>Electrician Services</label><br />
-            <input type="radio" id="plumbing" value="Plumbing" />
+
+            <input 
+                type="radio" 
+                for="service"
+                id="plumbing" 
+                value="plumbing" />
             <label>Plumbing</label><br />
-            <input type="radio" id="hvac" value="HVAC" />
+
+            <input 
+            type="radio" 
+            for="service"
+            id="hvac" 
+            value="HVAC" />
             <label>HVAC</label><br />
-            <label for="specialty">What is your specialty?</label><br />
-            <input type="text" id="specialty" name="specialty" /><br />
+
+
+            <label for="adText">What is your specialty?</label><br />
+            <input type="text" id="adText" name="adText" /><br />
             <button type="button" id="renderAdButton">Render Ad</button>
           </div>
         </form>
