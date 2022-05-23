@@ -1,6 +1,6 @@
 const router =require('express').Router()
 const withAuth = require('../utils/auth');
-const {User,Comment,Ads} =require('../models');
+const {User,Comments,Ads} =require('../models');
 
 router.get('/', (req, res) => {
     res.render('login');
@@ -8,25 +8,26 @@ router.get('/', (req, res) => {
 router.get('/signup', (req,res)=>{
     res.render('signup')
 })
-router.get('/dashboard', withAuth, (req, res) =>{
+router.get('/dashboard',withAuth, async (req, res) =>{
     try{
         const dbUserData = await User.findAll({
-            include:[ {
-                model:Comment, Ads
-            },
-        ],
+            include:[
+                {
+                    model:Comments,Ads
+                },
+            ],
         });
-        const users = dbUserData.map((user)=> user.get({plain:true}));
-
-    res.render('dashboard',{
-        users,
-        loggedIn: req.session.loggedIn,
-    })
+        const users = dbUserData.map((user)=>
+        user.get({plain:true}));
+        res.render('dashboard',{
+            users,
+            loggedIn: req.session.loggedIn,
+        }) 
     }
     catch (err) {
-        crossOriginIsolated.log(err);
+        console.log(err);
         res.status(500).json(err);
-    }
+        }
 });
 
 router.get('/ads',withAuth, (req, res) => {

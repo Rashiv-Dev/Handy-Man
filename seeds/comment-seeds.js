@@ -1,7 +1,7 @@
 const sequelize = require('../config/connection');
-const { Comment } = require('../models');
+const { Comments } = require('../models');
 
-const commentdata = [
+const commentData = [
   { 
     rating: 4,
     text:'The ipsum apsum shock shak. Mr arts n', 
@@ -17,6 +17,6 @@ const commentdata = [
 ]
 
 
-const seedComments = () => Comment.bulkCreate(commentdata);
+const seedComments = () => Comments.bulkCreate(commentData,{individualHooks: true});
 
 module.exports = seedComments;

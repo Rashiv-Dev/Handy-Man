@@ -1,7 +1,7 @@
 const sequelize = require('../config/connection');
-const { User, Post } = require('../models');
+const { User} = require('../models');
 
-const companydata = [
+const adsData = [
   {
     company_name: 'JD Stoneworks',
     service: 'Landscaping',
@@ -18,6 +18,6 @@ const companydata = [
 
 ];
 
-const seedCompany = () => User.bulkCreate(companydata, {individualHooks: true});
+const seedAds = () => User.bulkCreate(adsData, {individualHooks: true});
 
-module.exports = seedCompany;
+module.exports = seedAds;
