@@ -1,53 +1,53 @@
-var loginFormEl = document.querySelector('.login-form');
-var signupFormEl = document.querySelector('.signup-form');
+const loginFormEl = document.querySelector(".login-form");
+const signupFormEl = document.querySelector(".signup-form");
 
-const loginFormHandler = async (event) => {
-    event.preventDefault();
+async function loginFormHandler(event) {
+  event.preventDefault();
 
-    const email = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
 
-    if (email && password) {
-    const response = await fetch('/api/users/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
+  const email = document.querySelector("#email-login").value.trim();
+  const password = document.querySelector("#password-login").value.trim();
+
+  if (email && password) {
+    const response = await fetch("/api/users/login", {
+      method: "POST",
+      body: JSON.stringify({ 
+          email, 
+          password
+         }),
+      headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-        document.location.replace('/dashboard');
+      document.location.replace("/dashboard");
     } else {
-        alert('Failed to log in.');
+      alert("Failed to log in.");
     }
-    }
+  }
 };
-
 
 const signupFormHandler = async (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
+  const username = document.querySelector("#username-signup").value.trim();
+  const email = document.querySelector("#email-signup").value.trim();
+  const password = document.querySelector("#password-signup").value.trim();
 
-    if (username && email && password) {
-    const response = await fetch('/api/users', {
-        method: 'POST',
-        body: JSON.stringify({ username, email, password }),
-        headers: { 'Content-Type': 'application/json' },
+  if (username && email && password) {
+    const response = await fetch("/api/users", {
+      method: "POST",
+      body: JSON.stringify({ username, email, password }),
+      headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-        document.location.replace('/');
+      document.location.replace("/");
     } else {
-        alert('Failed to sign up.');
+      alert("Failed to sign up.");
     }
-    }
+  }
 };
 
+loginFormEl.addEventListener("submit", loginFormHandler);
 
-loginFormEl.addEventListener('submit', loginFormHandler);
-
-
-signupFormEl.addEventListener('submit', signupFormHandler);
-
+signupFormEl.addEventListener("submit", signupFormHandler);
