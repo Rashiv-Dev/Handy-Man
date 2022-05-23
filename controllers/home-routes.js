@@ -1,5 +1,6 @@
 const router =require('express').Router()
 const withAuth = require('../utils/auth');
+const {User,Comment,Ads} =require('../models');
 
 router.get('/', (req, res) => {
     res.render('login');
@@ -16,7 +17,7 @@ router.get('/dashboard', withAuth, (req, res) =>{
         ],
         });
         const users = dbUserData.map((user)=> user.get({plain:true}));
-   
+
     res.render('dashboard',{
         users,
         loggedIn: req.session.loggedIn,

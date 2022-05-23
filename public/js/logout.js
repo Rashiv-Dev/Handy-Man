@@ -1,4 +1,4 @@
-const logoutEl=document.querySelector('#logout');
+var logoutEl=document.querySelector('#logout');
 
 const logout = async () => {
     const response = await fetch('/api/users/logout', {
