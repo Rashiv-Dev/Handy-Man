@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 const {Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection')
@@ -54,3 +56,4 @@ User.init(
 }
 );
 module.exports = User;
+>>>>>>> 9c39f3f8785e05cea1b092cd6042f1f8955c97e7
