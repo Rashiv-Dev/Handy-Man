@@ -2,15 +2,17 @@ const sequelize = require('../config/connection');
 const { Comment } = require('../models');
 
 const commentdata = [
-  {
-    user_id: 'user1',
-    user_test: 'yabadab@somesite.com',
-    comment_text: 'The ipsum apsum shock shak. Mr arts n'
+  { 
+    rating: 4,
+    text:'The ipsum apsum shock shak. Mr arts n', 
+    email: 'yabadab@somesite.com',
+    user_id: 1,
   },
   {
-    user_id: 'user2',
-    user_test: 'bigbad@yahoo.com',
-    comment_text: 'Smarty ipsy opsum OMG it was co crazy man'
+    rating: 5,
+    text:'The ipsum apsum shock shak. Mr arts n', 
+    email: 'bill@somesite.com',
+    user_id: 2,
   }
 ]
 
