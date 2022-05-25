@@ -4,16 +4,19 @@ const User = require('./User');
 const Comments = require('./Comments');
 
 
-User.hasMany(Comments);
-User.hasMany(Ads);
-
-User.hasMany( Ads, {
-    foreignKey:'User_id'
-})
+Ads.hasMany(Comments,{
+foreignKey:'user_id'
+});
+User.hasMany(Ads,{
+foreignKey:'user_id'
+});
+Comments.belongsTo(Ads,{
+    through: User,
+    foreignKey: 'user_id'
+});
 Ads.belongsTo(User,{
-    foreignKey: 'User_id'
-})
-
+    foreignKey: 'user_id'
+});
 
 
 
