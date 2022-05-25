@@ -17,5 +17,5 @@ Ads.belongsTo(User,{
 
 
 
-module.exports = {Ads,User};
+module.exports = {Ads,User,Comments};
 
