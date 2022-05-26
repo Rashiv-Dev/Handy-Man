@@ -29,7 +29,7 @@ Comments.init(
         user_id:{
             type: DataTypes.INTEGER,
             references: {
-                model: 'User',
+                model: 'user',
                 key: 'id',
             },
         },
@@ -39,7 +39,7 @@ Comments.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'ad'
-    });
+        modelName: 'comment'
+    })
 
-module.exports = Comment ; 
+module.exports = Comments ; 

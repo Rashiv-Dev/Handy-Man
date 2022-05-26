@@ -1,6 +1,7 @@
 const router =require('express').Router()
 const withAuth = require('../utils/auth');
-const {User,Comment,Ads} =require('../models');
+const {User,Comments,Ads} =require('../models');
+const { compareSync } = require('bcrypt');
 
 router.get('/', (req, res) => {
     res.render('login');
@@ -8,25 +9,30 @@ router.get('/', (req, res) => {
 router.get('/signup', (req,res)=>{
     res.render('signup')
 })
-router.get('/dashboard', withAuth, (req, res) =>{
-    try{
-        const dbUserData = await User.findAll({
-            include:[ {
-                model:Comment, Ads
-            },
-        ],
-        });
-        const users = dbUserData.map((user)=> user.get({plain:true}));
+router.get('/dashboard',withAuth, async (req, res) =>{
 
-    res.render('dashboard',{
+        User.findAll({
+            include:[
+                {
+                    model:Ads,
+                    attributes:['id','company_name','service','ad_text'],
+                include: [{
+                    model: Comments,
+                    attributes: ['id','rating','text', 'email'],
+                }]
+}]
+                })
+.then(dbUserData=>{
+    const users = dbUserData.map(user=> user.get({plain:true}));
+    res.render('dashboard', {
         users,
-        loggedIn: req.session.loggedIn,
-    })
-    }
-    catch (err) {
-        crossOriginIsolated.log(err);
-        res.status(500).json(err);
-    }
+        loggedIn: req.session.loggedIn
+      });
+}) 
+.catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.get('/ads',withAuth, (req, res) => {
