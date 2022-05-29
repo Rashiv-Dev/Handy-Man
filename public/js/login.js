@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+var loginFormEl = document.querySelector(".login-form");
+var signupFormEl = document.querySelector(".signup-form");
+
+const loginFormHandler = async (event) => {
+  event.preventDefault();
+=======
 const loginFormHandler = async (event) => {
     event.preventDefault();
-
+>>>>>>> a72d6637c82b31cb5fbf71992f8ee6c678b85fcc
 
   const email = document.querySelector("#email-login").value.trim();
   const password = document.querySelector("#password-login").value.trim();
@@ -8,10 +15,7 @@ const loginFormHandler = async (event) => {
   if (email && password) {
     const response = await fetch("/api/users/login", {
       method: "POST",
-      body: JSON.stringify({ 
-          email, 
-          password
-         }),
+      body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
