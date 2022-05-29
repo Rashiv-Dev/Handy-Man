@@ -1,21 +1,30 @@
-!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href ="">
+    <link rel = "stylesheet" href ="/css/style.css">
+    <script src = '/js/login.js'></script>
+    <script src = '/js/logout.js'></script>
     <title>Handy Man</title>
 </head>
 <body>
     <header>
         <h1>Handy Man</h1>
         <nav>
-            <a href="/login">login</a>
+    
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/">Login</a>
+    {{/if}}
         </nav>
     </header>
-<main>
-    {{{ body }}}
+<main class="flex-container">
+
+    {{{body}}}
+    
 </main>
 
 <footer>

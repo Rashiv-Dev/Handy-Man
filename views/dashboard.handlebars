@@ -1,0 +1,35 @@
+<section class="user">
+  <div>
+  <h2>Username:{{user.username}}</h2>
+  </div>
+
+</section>
+
+
+<section class="ads">
+  <div>
+  <a href= '/ads'><button type="button">New Ad</button></a>
+  </div>
+<div class="currentAds">
+<h2>ads:</h2>
+{{#each ad as |ads|}}
+{{>ads-details}}
+{{/each}}
+</div>
+
+<div class="comments">
+  <div>
+    <h3>Customer FeedBack:</h3>
+    {{#each comment.rating as |rating|}}
+    {{>rating-details}}
+    {{/each}}
+    
+    {{#each comment.text as |comments|}}
+    {{>comments-details}}
+    {{/each}}
+  </div>
+
+</div>
+</section>
+
+<script src="/js/"></script>
